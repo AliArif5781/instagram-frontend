@@ -1,5 +1,7 @@
 # Instagram Clone - Frontend
 
+<img width="1348" height="634" alt="image" src="https://github.com/user-attachments/assets/a0b4e87d-beec-40d9-8a36-e3a23b877b64" />
+
 A modern Instagram clone frontend built with React, TypeScript, and Vite.
 
 ## 🚀 Features
