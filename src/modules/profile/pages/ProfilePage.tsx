@@ -92,10 +92,6 @@ const ProfilePage = () => {
     }
   };
 
-  useEffect(() => {
-    dispatch(getUserProfileThunk());
-  }, [dispatch]);
-
   // Fetch follow status for other users
   useEffect(() => {
     if (userId && !isOwnProfile) {
