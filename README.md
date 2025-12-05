@@ -1,10 +1,12 @@
 # Instagram Clone - Frontend
 
+<img width="1348" height="634" alt="image" src="https://github.com/user-attachments/assets/a0b4e87d-beec-40d9-8a36-e3a23b877b64" />
+
 A modern Instagram clone frontend built with React, TypeScript, and Vite.
 
 ## 🚀 Features
 - **Create Post**: Users can create an posts include photo and video and other users can also see his posts.
-- **Create Story**: Users can create an story and follow users can see his story.
+- **Create Story**: Users can create an story and follow users can see his story and remove after 24hr.
 - **Send RealTime Messages**: Users can also send messages to his friend in real-time.
 - **Searh Users**: Users can also search others users and see other users posts.
 - **Follow & UnFollow**: User can also follow or unfollow other users and shown in followers and following.
