@@ -38,8 +38,7 @@ const ProfilePage = () => {
 
   // Get current logged-in user
   const currentUser = useAppSelector((state) => state.user.userProfile);
-  // console.log(userProfile, "UserProfile");
-  // console.log(currentUser, "currentUser");
+
   // Check if this is current user's own profile
   const isOwnProfile = currentUser?._id === userProfile?._id;
 
@@ -91,6 +90,10 @@ const ProfilePage = () => {
       setModalsLoaded(true);
     }
   };
+
+  useEffect(() => {
+    dispatch(getUserProfileThunk());
+  }, [dispatch]);
 
   // Fetch follow status for other users
   useEffect(() => {
@@ -213,7 +216,7 @@ const ProfilePage = () => {
                 </span>
               )}
               <div>
-                <span className="leading-relaxed text-base text-(--color-dark-gray) font-medium  max-w-md block mx-auto md:mx-0">
+                <span className="leading-relaxed text-base text-[var(--color-dark-gray)] font-medium  max-w-md block mx-auto md:mx-0">
                   {userProfile?.bio ? (
                     userProfile.bio
                   ) : (
