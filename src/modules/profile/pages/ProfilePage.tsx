@@ -216,7 +216,7 @@ const ProfilePage = () => {
                 </span>
               )}
               <div>
-                <span className="leading-relaxed text-base text-[var(--color-dark-gray)] font-medium  max-w-md block mx-auto md:mx-0">
+                <span className="leading-relaxed text-base text-(--color-dark-gray) font-medium  max-w-md block mx-auto md:mx-0">
                   {userProfile?.bio ? (
                     userProfile.bio
                   ) : (
