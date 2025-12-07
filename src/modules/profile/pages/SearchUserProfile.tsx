@@ -11,6 +11,7 @@ import {
 import { getUserByIdThunk } from "../../../store/slice/user.thunk";
 import Loader from "../../../components/Loader";
 import { getUserPostsThunk } from "../../../store/postSlice/post.thunk";
+import { ArrowLeft } from "lucide-react";
 
 const SearchUserProfile = () => {
   const { userId } = useParams();
@@ -138,7 +139,9 @@ const SearchUserProfile = () => {
         onClick={handleBack}
         className="mb-6 flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
       >
-        <span>← Back</span>
+        <span className="cursor-pointer">
+          <ArrowLeft />
+        </span>
       </button>
 
       {/* Profile Header */}
@@ -175,12 +178,13 @@ const SearchUserProfile = () => {
                     <button
                       onClick={handleUnfollow}
                       disabled={loading}
-                      className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg cursor-pointer transition-all duration-300 active:scale-95 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white px-4 py-2 
+                   rounded-lg cursor-pointer transition-all duration-300 active:scale-95 
+                   font-medium disabled:opacity-50 disabled:cursor-not-allowed flex justify-center"
                     >
                       {loading ? (
-                        <div className="flex items-center gap-2">
-                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                          Loading...
+                        <div className="flex justify-center items-center">
+                          <Loader />
                         </div>
                       ) : (
                         "Unfollow"
@@ -190,12 +194,13 @@ const SearchUserProfile = () => {
                     <button
                       onClick={handleFollow}
                       disabled={loading || isFollowing}
-                      className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg cursor-pointer transition-all duration-300 active:scale-95 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 
+                   rounded-lg cursor-pointer transition-all duration-300 active:scale-95 
+                   font-medium disabled:opacity-50 disabled:cursor-not-allowed flex justify-center"
                     >
                       {loading ? (
-                        <div className="flex items-center gap-2">
-                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                          Loading...
+                        <div className="flex justify-center items-center">
+                          <Loader />
                         </div>
                       ) : (
                         "Follow"
