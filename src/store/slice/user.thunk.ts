@@ -101,7 +101,7 @@ export const editUserProfileThunk = createAsyncThunk(
         location,
         bio,
       });
-      console.log(response, "editUserProfileThunk");
+      console.log(response, "===editUserProfileThunk===");
       toast.success("User Profile Edit Successfully");
       return response.data;
     } catch (error: any) {
@@ -159,7 +159,7 @@ export const updateUserProfileThunk = createAsyncThunk(
   "user/updateProfile",
   async (profileData: UpdateProfileData, { rejectWithValue }) => {
     try {
-      const response = await api.put(
+      const response = await api.patch(
         "/api/user/post/editUserProfile",
         profileData
       );
