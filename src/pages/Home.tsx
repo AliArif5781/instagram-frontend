@@ -10,6 +10,7 @@ import {
   getSocket,
 } from "../store/socket/socket.slice";
 import { setNewMessage } from "../store/message/message.slice";
+import BottomNavbar from "./BottomNavbar";
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -121,15 +122,24 @@ const Home = () => {
 
   return (
     <div className="flex">
-      <Sidebar isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />
+      {/* Desktop Sidebar */}
+      <div className="hidden md:block">
+        <Sidebar isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />
+      </div>
 
+      {/* Main Content */}
       <main
-        className={`min-h-screen transition-all duration-300 ${
-          isCollapsed ? "ml-20" : "ml-60"
-        } flex-1`}
+        className={`min-h-screen transition-all duration-300 flex-1 ${
+          isCollapsed ? "md:ml-20" : "md:ml-60"
+        }`}
       >
         <Outlet />
       </main>
+
+      {/* Mobile Bottom Navbar */}
+      <div className="md:hidden">
+        <BottomNavbar />
+      </div>
     </div>
   );
 };
