@@ -178,14 +178,14 @@ const Sidebar = ({
           {!isCollapsed && (
             <Link to="/" className="flex items-center space-x-2">
               <Instagram className="w-8 h-8 text-white" />
-              <span className="text-xl font-instagram font-semibold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <span className="text-xl font-instagram font-semibold bg-linear-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
                 Instagram
               </span>
             </Link>
           )}
           {isCollapsed && (
             <Link to="/" className="flex justify-center group">
-              <div className="p-1 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300">
+              <div className="p-1 rounded-lg bg-linear-to-r from-purple-500 to-pink-500 transition-all duration-300">
                 <Instagram className="w-9 h-9 text-white group-hover:text-white" />
               </div>
             </Link>
@@ -194,7 +194,7 @@ const Sidebar = ({
           {/* Collapse Button */}
           <button
             onClick={() => setIsCollapsed(!isCollapsed)}
-            className="p-2 rounded-full hover:bg-gray-800 transition-colors"
+            className="p-2 rounded-full hover:bg-gray-800 transition-colors hidden md:block"
           >
             <svg
               className="w-4 h-4 text-white"
